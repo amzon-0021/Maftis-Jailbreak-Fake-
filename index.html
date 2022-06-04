@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>Maftis</title>
+<meta charset="utf-8">
+<style>
+    @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+    html{
+        background-color:black;
+        color:white;
+        text-align:center;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size:200%;}
+  /* From uiverse.io by @felipesntr */
+button {
+ font-size: 16px;
+ position: relative;
+ margin: auto;
+ padding: 1em 2.5em 1em 2.5em;
+ border: none;
+ background: #fff;
+ transition: all 0.1s linear;
+ box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+ transform: scale(0.95);
+}
+
+button span {
+ color: #464646;
+}
+
+button .border {
+ position: absolute;
+ border: 0.15em solid #fff;
+ transition: all 0.3s 0.08s linear;
+ top: 50%;
+ left: 50%;
+ width: 9em;
+ height: 3em;
+ transform: translate(-50%, -50%);
+}
+
+button:hover .border {
+ display: block;
+ width: 9.9em;
+ height: 3.7em;
+}
+
+.full-rounded {
+ border-radius: 2em;
+}
+    </style>
+</head>
+<body>
+　　　　 <script>
+         function sleep(msec) {
+           return new Promise(function(resolve) {
+
+              setTimeout(function() {resolve()}, msec);
+
+           })
+        }
+         async function jailbreak(){
+            document.getElementById("execute").innerHTML = "Jailbreaking...";
+            let button = document.querySelector(".button");
+            button.disabled = true;
+            document.getElementById("mp").value = "20";
+            const sleep = waitTime => new Promise( resolve => setTimeout(resolve, waitTime) );
+            document.getElementById("text").innerHTML = "(1/6)Bypass SandBox...";
+            document.getElementById("mp").value = "20";
+            await sleep(500)
+            document.getElementById("text").innerHTML = "(2/6)Bypass amfid...";
+            document.getElementById("mp").value = "40";
+            await sleep(3000)
+            document.getElementById("text").innerHTML = "(3/6)Getting Root...";
+            document.getElementById("mp").value = "45";
+            await sleep(100)
+            document.getElementById("text").innerHTML = "(4/6)installing Maftis_system...";
+            document.getElementById("mp").value = "65";
+             await sleep(5000)
+            document.getElementById("text").innerHTML = "(4/6)installing Maftis_Kernel...";
+             document.getElementById("mp").value = "70";
+            await sleep(4500)
+            document.getElementById("text").innerHTML = "(4/6)installing Maftis_BootLoader...";
+             document.getElementById("mp").value = "75";
+            await sleep(4000)
+            document.getElementById("text").innerHTML = "(4/6)installing Maftis_Dev-Tools...";
+             document.getElementById("mp").value = "80";
+            await sleep(2000)
+            document.getElementById("text").innerHTML = "(5/6)Installing JB...";
+            document.getElementById("mp").value = "90";
+            await sleep(1000)
+            document.getElementById("text").innerHTML = "(6/6) Completed Jailbreak!!";
+            document.getElementById("mp").value = "100";
+            document.getElementById("execute").innerHTML = "Jailbreaked";
+         }
+        </script>
+        <h1>Maftis</h1>
+        <p>iOS 15.0 ~ 15.2 Jailbreak</p><p>Create By Asnia</p><p>Replace the kernel inside iOS with Maftis-System</p><p> so that the jailbreak is not lost after reboot. </p><p>(Note this is for developers and not for general use)</p><br>
+        <progress id="mp" value="0" max="100">0%</progress>
+        <br><button class="button" id="execute" onclick="jailbreak()">Jailbreak</button>
+        
+        <div id="result" onclick="jailbreak()"></div>
+        <p id="text"></p>
+    </body>
+</html>
