@@ -1,13 +1,14 @@
 <html>
 <head>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="Maftis">
-<link rel="apple-touch-icon" href="https://pbs.twimg.com/profile_images/1482600451090513920/THJ74Hn9_400x400.jpg" sizes="72x72">
 <title>Maftis</title>
 <meta charset="utf-8">
 <style>
     @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+    @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+    h1{
+        font-family: 'Righteous', cursive;
+        font-size:200
+    }
     html{
         background-color:black;
         color:white;
@@ -15,46 +16,14 @@
         font-family: 'M PLUS Rounded 1c', sans-serif;
         font-size:200%;}
   /* From uiverse.io by @felipesntr */
-button {
- font-size: 16px;
- position: relative;
- margin: auto;
- padding: 1em 2.5em 1em 2.5em;
- border: none;
- background: #fff;
- transition: all 0.1s linear;
- box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
- width: 20%;
-  padding: 5%;
-}
-
-button:active {
- transform: scale(0.95);
-}
-
-button span {
- color: #464646;
-}
-
-button .border {
- position: absolute;
- border: 0.15em solid #fff;
- transition: all 0.3s 0.08s linear;
- top: 50%;
- left: 50%;
- width: 9em;
- height: 3em;
- transform: translate(-50%, -50%);
-}
-
-button:hover .border {
- display: block;
- width: 9.9em;
- height: 3.7em;
-}
-
-.full-rounded {
- border-radius: 2em;
+    button{
+        color:aqua;
+        font-size:30;
+        width: 300px;
+        height: 300px;
+        border-radius:300px;
+  border-color: aqua;
+  background: transparent;
 }
     </style>
 </head>
@@ -68,7 +37,7 @@ button:hover .border {
            })
         }
          async function jailbreak(){
-            document.getElementById("execute").innerHTML = "Jailbreaking...";
+            document.getElementById("demo").innerHTML = "Jailbreaking...";
             let button = document.querySelector(".button");
             button.disabled = true;
             document.getElementById("mp").value = "20";
@@ -99,15 +68,21 @@ button:hover .border {
             await sleep(1000)
             document.getElementById("text").innerHTML = "(6/6) Completed Jailbreak!!";
             document.getElementById("mp").value = "100";
-            document.getElementById("execute").innerHTML = "Jailbreaked";
+            document.getElementById("demo").innerHTML = "Jailbreaked";
          }
         </script>
         <h1>Maftis</h1>
-        <p>iOS 15.0 ~ 16.5 Jailbreak</p><p>Create By Asnia</p><p>Replace the kernel inside iOS with Maftis-System</p><p> so that the jailbreak is not lost after reboot. </p><p>(Note this is for developers and not for general use)</p><br>
+        <p>iOS 13.3  ~ 16.0 Jailbreak</p><p>Create By Asnia</p><p>You can obtain root privileges and get a stable jailbreak environment with specifications similar to Android's Magisk (when installing a tweak, you need to install it through Maftis, which uses the SandBox environment dedicated to the tweak to increase security and implement new methods of jailbreaking). </p><br><p>Please leave Maftis running to continue the jailbreak</p>
+    <div id="result"></div>
+    <p id="text"></p>
         <progress id="mp" value="0" max="100">0%</progress>
-        <br><button class="button" id="execute" onclick="jailbreak()">Jailbreak</button>
+    
+    <div align="center">
+    <br><button class="button" id="demo" onclick="jailbreak()">Jailbreak</button>
+</div>
+        <br>
         
-        <div id="result" onclick="jailbreak()"></div>
-        <p id="text"></p>
+        
+        
     </body>
 </html>
